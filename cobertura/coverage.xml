@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+
+<coverage line-rate="0.0" branch-rate="0.0" lines-covered="0" lines-valid="12" branches-covered="0" branches-valid="12" complexity="0.0" version="1.9.4.1" timestamp="1526370875351">
+	<sources>
+		<source>/home/git/msusel/msusel-config/src/main/java</source>
+		<source>--source</source>
+		<source>/home/git/msusel/msusel-config/src/main/groovy</source>
+	</sources>
+	<packages>
+		<package name="edu.montana.gsoc.msusel.config" line-rate="0.0" branch-rate="0.0" complexity="0.0">
+			<classes>
+				<class name="edu.montana.gsoc.msusel.config.ConfigProvider" filename="edu/montana/gsoc/msusel/config/ConfigProvider.groovy" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="edu.montana.gsoc.msusel.config.Configuration" filename="edu/montana/gsoc/msusel/config/Configuration.groovy" line-rate="1.0" branch-rate="1.0" complexity="0.0">
+					<methods>
+					</methods>
+					<lines>
+					</lines>
+				</class>
+				<class name="edu.montana.gsoc.msusel.config.DefaultConfigProvider" filename="edu/montana/gsoc/msusel/config/DefaultConfigProvider.groovy" line-rate="0.0" branch-rate="0.0" complexity="0.0">
+					<methods>
+						<method name="&lt;init&gt;" signature="(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="59" hits="0" branch="false"/>
+								<line number="60" hits="0" branch="false"/>
+								<line number="61" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="loadCmdLine" signature="()Ljava/lang/Object;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="92" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="loadConfig" signature="([Ljava/lang/String;)Ljava/lang/Object;" line-rate="0.0" branch-rate="0.0">
+							<lines>
+								<line number="66" hits="0" branch="false"/>
+								<line number="68" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="69" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="70" hits="0" branch="true" condition-coverage="0% (0/4)">
+									<conditions>
+										<condition number="0" type="jump" coverage="0%"/>
+										<condition number="1" type="jump" coverage="0%"/>
+									</conditions>
+								</line>
+								<line number="72" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="loadHome" signature="()Ljava/lang/Object;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="78" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="loadLocal" signature="()Ljava/lang/Object;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="85" hits="0" branch="false"/>
+							</lines>
+						</method>
+						<method name="unify" signature="(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;" line-rate="0.0" branch-rate="1.0">
+							<lines>
+								<line number="102" hits="0" branch="false"/>
+							</lines>
+						</method>
+					</methods>
+					<lines>
+						<line number="59" hits="0" branch="false"/>
+						<line number="60" hits="0" branch="false"/>
+						<line number="61" hits="0" branch="false"/>
+						<line number="66" hits="0" branch="false"/>
+						<line number="68" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="69" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="70" hits="0" branch="true" condition-coverage="0% (0/4)">
+							<conditions>
+								<condition number="0" type="jump" coverage="0%"/>
+								<condition number="1" type="jump" coverage="0%"/>
+							</conditions>
+						</line>
+						<line number="72" hits="0" branch="false"/>
+						<line number="78" hits="0" branch="false"/>
+						<line number="85" hits="0" branch="false"/>
+						<line number="92" hits="0" branch="false"/>
+						<line number="102" hits="0" branch="false"/>
+					</lines>
+				</class>
+			</classes>
+		</package>
+	</packages>
+</coverage>
