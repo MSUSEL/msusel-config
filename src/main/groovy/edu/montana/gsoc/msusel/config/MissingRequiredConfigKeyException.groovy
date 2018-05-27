@@ -26,8 +26,25 @@
 package edu.montana.gsoc.msusel.config
 
 /**
+ * Exception class for when a unified configuration is missing required keys
  * @author Isaac Griffith
  * @version 1.2.0
  */
-class Configuration {
+class MissingRequiredConfigKeyException extends Exception {
+
+    MissingRequiredConfigKeyException() {
+        super()
+    }
+
+    MissingRequiredConfigKeyException(String var1) {
+        super(var1)
+    }
+
+    MissingRequiredConfigKeyException(String var1, Throwable var2) {
+        super(var1, var2)
+    }
+
+    MissingRequiredConfigKeyException(Throwable var1) {
+        super(var1)
+    }
 }

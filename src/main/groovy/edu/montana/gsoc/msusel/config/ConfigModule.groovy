@@ -25,30 +25,18 @@
  */
 package edu.montana.gsoc.msusel.config
 
+import com.google.inject.AbstractModule
+import com.google.inject.Singleton
+
 /**
- * Contract for and config provider, must provide a loadConfig method which returns a configuration item
+ * Guice Injection module for a config provider
  * @author Isaac Griffith
  * @version 1.2.0
  */
-interface ConfigProvider {
+class ConfigModule extends AbstractModule {
 
-    /**
-     * Loads the configuration information from the necessary directories and unifies it with the provided command line arguments
-     * @param cmdLineArgs list of command line arguments
-     * @throws MissingRequiredConfigKeyException if any required key is not found in any of the provided components of the configuration
-     */
-    void loadConfig(String... cmdLineArgs) throws MissingRequiredConfigKeyException
-
-    /**
-     * Retrieves a list of the currently known keys for the current configuration
-     * @return list of current keys in the configuration
-     */
-    List<String> configKeys()
-
-    /**
-     * Retrieves the string value associated with the given key, or null if no such key exists
-     * @param key Key for which the value is expected
-     * @return value associated with the given key, or null if no such value exists
-     */
-    String value(String key)
+    @Override
+    protected void configure() {
+        bind(ConfigProvider.class).to(DefaultConfigProvider.class).in(Singleton.class)
+    }
 }
