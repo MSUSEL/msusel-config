@@ -28,7 +28,7 @@ package edu.montana.gsoc.msusel.config
 /**
  * Contract for and config provider, must provide a loadConfig method which returns a configuration item
  * @author Isaac Griffith
- * @version 1.2.0
+ * @version 1.3.0
  */
 interface ConfigProvider {
 

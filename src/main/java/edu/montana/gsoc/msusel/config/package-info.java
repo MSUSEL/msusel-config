@@ -26,6 +26,6 @@
 /**
  * Package containing the basic classes for the use of a unifying configuration reader and provider.
  * @author Isaac Griffith
- * @version 1.2.0
+ * @version 1.3.0
  */
 package edu.montana.gsoc.msusel.config;
