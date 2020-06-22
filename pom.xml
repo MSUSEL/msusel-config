@@ -7,12 +7,16 @@
         <artifactId>msusel-parent</artifactId>
         <version>1.3.0-idg</version>
     </parent>
-  
     <modelVersion>4.0.0</modelVersion>
     <artifactId>msusel-config</artifactId>
     <packaging>jar</packaging>
     <name>Config Provider</name>
     <url>https://msusel.github.io/msusel-config</url>
+
+    <properties>
+        <siteRepoName>msusel-config</siteRepoName>
+        <siteOwner>MSUSEL</siteOwner>
+    </properties>
 
     <developers>
         <developer>
@@ -34,96 +38,6 @@
 
     <build>
         <plugins>
-            <plugin>
-                <!-- Deploy the website -->
-                <groupId>com.github.github</groupId>
-                <artifactId>site-maven-plugin</artifactId>
-                <version>0.12</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>site</goal>
-                        </goals>
-                        <!-- select the Maven phase in which the plugin will be executed -->
-                        <phase>site-deploy</phase>
-                        <configuration>
-                            <!-- Plugin configuration goes here -->
-                            <server>github</server>
-                            <repositoryName>msusel-config</repositoryName>
-                            <repositoryOwner>MSUSEL</repositoryOwner>
-                            <!-- The commit message -->
-                            <message>Building site for project</message>
-                            <!-- The location where the site is uploaded -->
-                            <path/>
-                            <!-- Use merge or override the content -->
-                            <merge>true</merge>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.codehaus.gmavenplus</groupId>
-                <artifactId>gmavenplus-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>groovy-site</id>
-                        <phase>site</phase>
-                        <goals>
-                            <goal>generateStubs</goal>
-                            <goal>generateTestStubs</goal>
-                            <goal>groovydoc</goal>
-                            <goal>groovydocTests</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>groovy-compile</id>
-                        <goals>
-                            <goal>addSources</goal>
-                            <goal>addTestSources</goal>
-                            <goal>generateStubs</goal>
-                            <goal>compile</goal>
-                            <goal>generateTestStubs</goal>
-                            <goal>compileTests</goal>
-                            <goal>removeStubs</goal>
-                            <goal>removeTestStubs</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <skipDeploy>true</skipDeploy>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.0.2</version>
-                <executions>
-                    <execution>
-                        <id>copy-groovydocs-to-site</id>
-                        <phase>site</phase>
-                        <goals>
-                            <goal>copy-resources</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>${project.reporting.outputDirectory}/groovydoc</outputDirectory>
-                            <overwrite>true</overwrite>
-                            <resources>
-                                <resource>
-                                    <directory>${project.build.directory}/gapidocs</directory>
-                                    <includes>
-                                        <include>**/*</include>
-                                    </includes>
-                                </resource>
-                            </resources>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
             <!--<plugin>-->
             <!--<groupId>com.devexperts.bintray</groupId>-->
             <!--<artifactId>bintray-maven-plugin</artifactId>-->
@@ -171,23 +85,6 @@
     </reporting>
 
     <dependencies>
-        <dependency>
-            <groupId>org.codehaus.groovy</groupId>
-            <artifactId>groovy-all</artifactId>
-            <version>2.4.8</version>
-        </dependency>
-        <dependency>
-            <groupId>org.spockframework</groupId>
-            <artifactId>spock-core</artifactId>
-            <version>1.1-groovy-2.4-rc-3</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
-        <dependency>
-            <groupId>com.google.inject</groupId>
-            <artifactId>guice</artifactId>
-            <version>4.2.0</version>
-        </dependency>
     </dependencies>
 
     <repositories>
