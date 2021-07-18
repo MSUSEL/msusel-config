@@ -138,7 +138,7 @@ class DefaultConfigProvider implements ConfigProvider {
      */
     private ConfigObject loadHome() {
         def env = System.getenv()
-        String homedir = envvarname ? env[envvarname] : "./"
+        String homedir = envvarname ? env[envvarname] : "." + File.separator
         if (configFilename.endsWith(".properties"))
             processProperties(Paths.get(homedir, "config", configFilename))
         else
@@ -150,9 +150,9 @@ class DefaultConfigProvider implements ConfigProvider {
      */
     private ConfigObject loadLocal() {
         if (configFilename.endsWith(".properties"))
-            processProperties(Paths.get("./", configFilename))
+            processProperties(Paths.get("." + File.separator , configFilename))
         else
-            new ConfigSlurper().parse(Files.readAllLines(Paths.get("./", localDirectory, configFilename)).join("\n"))
+            new ConfigSlurper().parse(Files.readAllLines(Paths.get("." + File.separator, localDirectory, configFilename)).join("\n"))
     }
 
     private processProperties(Path path) {
